@@ -57,3 +57,9 @@ def logout_user(request):
     response = HttpResponseRedirect(reverse('wishlist:login'))
     response.delete_cookie('last_login')
     return response
+
+def wishlist_ajax(request):
+    return render(request, 'wishlist_ajax.html', context)
+
+def wishlist_ajax_submit(request):
+    return render(request, 'wishlist_ajax_submit.html', context)
